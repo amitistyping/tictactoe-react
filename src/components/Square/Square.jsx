@@ -1,6 +1,7 @@
 const Square = (props) => {
-	const { rowIndex, colIndex, colValue } = props;
-	return <button></button>;
+	const { colValue } = props;
+	const disableButton = () => (colValue ? true : false);
+	return <button disabled={disableButton}>{colValue}</button>;
 };
 
 export default Square;
